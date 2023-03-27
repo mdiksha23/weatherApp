@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-   DEV : {
-    BASE_URL: 'https://weatherapi-com.p.rapidapi.com/current.json',
-  }
+  DEV: {
+    BASE_URL: 'https://weatherapi-com.p.rapidapi.com/',
+  },
 };
 
 /*
