@@ -40,9 +40,13 @@ export class DashboardComponent implements OnInit {
     this.getForeCastData();
   }
 
+  submitDetails() {
+    this.getWeatherDetails();
+    this.getForeCastData();
+  }
+
   // get initial data
   getWeatherDetails() {
-    this.getForeCastData();
     this.http
       .request('get', 'current.json', null, this.cityName, null)
       .subscribe(
@@ -55,7 +59,7 @@ export class DashboardComponent implements OnInit {
 
   getForeCastData() {
     this.http
-      .request('get', 'forecast.json', null, this.cityName, '5')
+      .request('get', 'forecast.json', null, this.cityName, '3')
       .subscribe(
         (res) => {
           this.foreCastData = res.forecast.forecastday;
