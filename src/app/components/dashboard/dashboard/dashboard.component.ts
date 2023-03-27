@@ -42,6 +42,7 @@ export class DashboardComponent implements OnInit {
 
   // get initial data
   getWeatherDetails() {
+    this.getForeCastData();
     this.http
       .request('get', 'current.json', null, this.cityName, null)
       .subscribe(

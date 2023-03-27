@@ -13,6 +13,7 @@ import { HttpErrorInterceptorInterceptor } from './common-services/http-error-in
 // extra module for initial compoents
 import { ToastrModule } from 'ngx-toastr';
 import { DatePipe } from '@angular/common';
+import { DaysAgoPipe } from './common-pipes/days-ago.pipe';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +29,7 @@ import { DatePipe } from '@angular/common';
     ToastrModule.forRoot(),
   ],
   providers: [
+    DaysAgoPipe,
     DatePipe,
     {
       provide: HTTP_INTERCEPTORS,
